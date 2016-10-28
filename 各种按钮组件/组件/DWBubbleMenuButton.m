@@ -117,11 +117,109 @@ static float kDefaultAnimationDuration = 0.25f;
         
         [button.layer addAnimation:positionAnimation forKey:@"positionAnimation"];
         
+        button.layer.position = finalPosition;
         
+        //scale animation
+        CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
         
+        scaleAnimation.duration = _animationDuration;
+        scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        scaleAnimation.fromValue = [NSNumber numberWithFloat:0.01f];
+        scaleAnimation.toValue = [NSNumber numberWithFloat:1.f];
+        scaleAnimation.beginTime = CACurrentMediaTime() + (_animationDuration/(float)_buttonContainer.count * (float)i ) + 0.03f;
+        scaleAnimation.fillMode = kCAFillModeForwards;
+        scaleAnimation.removedOnCompletion = NO;
+        
+        [button.layer addAnimation:scaleAnimation forKey:@"scaleAnimation"];
+        button.transform = CGAffineTransformMakeScale(0.01f, 0.01f);
     }
+    [CATransaction commit];
+    _isCollapsed = NO;
 }
 
+-(void)dismissButtons{
+    if ([self.delegate respondsToSelector:@selector(bubbleMenuButtonWillCollapse:)]) {
+        [self.delegate bubbleMenuButtonWillCollapse:self];
+    }
+    self.userInteractionEnabled = NO;
+    [CATransaction begin];
+    [CATransaction setAnimationDuration:_animationDuration];
+    [CATransaction setCompletionBlock:^{
+//        [self _finishCollapse];
+        for (UIButton *button in _buttonContainer) {
+            button.transform = CGAffineTransformIdentity;
+            button.hidden = YES;
+        }
+        
+        if (self.delegate != nil) {
+            if ([self.delegate respondsToSelector:@selector(bubbleMenuButtonDidCollapse:)]) {
+                [self.delegate bubbleMenuButtonDidCollapse:self];
+            }
+        }
+        self.userInteractionEnabled = YES;
+        
+    }];
+    
+    int index = 0;
+    for (int i = (int)_buttonContainer.count - 1; i >= 0; i--) {
+        UIButton *button = [_buttonContainer objectAtIndex:i];
+        if (self.direction == DirectionDown || self.direction == DirectionRight) {
+            button = [_buttonContainer objectAtIndex:index];
+        }
+        
+        // scale animation
+        CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        
+        scaleAnimation.duration = _animationDuration;
+        scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        scaleAnimation.fromValue = [NSNumber numberWithFloat:1.f];
+        scaleAnimation.toValue = [NSNumber numberWithFloat:0.01f];
+        scaleAnimation.beginTime = CACurrentMediaTime() + (_animationDuration/(float)_buttonContainer.count *(float)index) + 0.03;
+        scaleAnimation.fillMode = kCAFillModeForwards;
+        scaleAnimation.removedOnCompletion = NO;
+        
+        [button.layer addAnimation:scaleAnimation forKey:@"scaleAnimation"];
+        button.transform = CGAffineTransformMakeScale(1.f, 1.f);
+        
+        //position animation
+        CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"postion"];
+        
+        CGPoint originPosition = button.layer.position;
+        CGPoint finalPosition = CGPointZero;
+        
+        switch (self.direction) {
+            case DirectionLeft:
+                finalPosition = CGPointMake(self.frame.size.width - self.homeButtonView.frame.size.width, self.frame.size.height/2.f);
+                break;
+            case DirectionRight:
+                finalPosition = CGPointMake(self.homeButtonView.frame.size.width, self.frame.size.height/2.f);
+                break;
+            case DirectionUp:
+                finalPosition = CGPointMake(self.frame.size.width/2.f, self.frame.size.height - self.homeButtonView.frame.size.height);
+                break;
+            case DirectionDown:
+                finalPosition = CGPointMake(self.frame.size.width/2.f, self.homeButtonView.frame.size.height);
+                break;
+            default:
+                break;
+        }
+        
+        positionAnimation.duration = _animationDuration;
+        positionAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        positionAnimation.fromValue = [NSValue valueWithCGPoint:originPosition];
+        positionAnimation.toValue = [NSValue valueWithCGPoint:finalPosition];
+        positionAnimation.beginTime = CACurrentMediaTime() + (_animationDuration/(float)_buttonContainer.count *(float)index);
+        positionAnimation.fillMode = kCAFillModeForwards;
+        positionAnimation.removedOnCompletion = NO;
+        
+        [button.layer addAnimation:positionAnimation forKey:@"positionAnimation"];
+        
+        button.layer.position = originPosition;
+        index++;
+    }
+    [CATransaction commit];
+    _isCollapsed = YES;
+}
 
 
 @end
