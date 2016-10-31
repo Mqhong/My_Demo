@@ -51,7 +51,7 @@ static float kDefaultAnimationDuration = 0.25f;
     if ([self.delegate respondsToSelector:@selector(bubbleMenuButtonWillExpand:)]) {
         [self.delegate bubbleMenuButtonWillExpand:self];
     }
-//    [self _prepareForButtonExpansion];
+    [self _prepareForButtonExpansion];
     self.userInteractionEnabled = NO;
     
     [CATransaction begin];
@@ -70,7 +70,7 @@ static float kDefaultAnimationDuration = 0.25f;
     
     NSArray *buttonContainer = _buttonContainer;
     if (self.direction == DirectionUp || self.direction == DirectionLeft) {
-//        buttonContainer = [self _reverseOrderFromArray:_buttonContainer];
+        buttonContainer = [self _reverseOrderFromArray:_buttonContainer];
     }
     for (int i = 0; i < buttonContainer.count; i++) {
         int index = (int)buttonContainer.count - (i+1);
@@ -145,7 +145,7 @@ static float kDefaultAnimationDuration = 0.25f;
     [CATransaction begin];
     [CATransaction setAnimationDuration:_animationDuration];
     [CATransaction setCompletionBlock:^{
-//        [self _finishCollapse];
+        [self _finishCollapse];
         for (UIButton *button in _buttonContainer) {
             button.transform = CGAffineTransformIdentity;
             button.hidden = YES;
@@ -222,4 +222,356 @@ static float kDefaultAnimationDuration = 0.25f;
 }
 
 
+#pragma mark -
+#pragma mark Private Methods
+
+-(void)_defaultInit{
+    self.clipsToBounds = YES;
+    self.layer.masksToBounds = YES;
+    
+    self.direction = DirectionUp;
+    self.animatedHighlighting = YES;
+    self.collapseAfterSelection = YES;
+    self.animationDuration = kDefaultAnimationDuration;
+    self.standbyAlpha = 1.0f;
+    self.highlightAlpha = 0.45f;
+    self.originFrame = self.frame;
+    self.buttonSpacing = 20.f;
+    _isCollapsed = YES;
+    
+    self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_handleTapGesture:)];
+    self.tapGestureRecognizer.cancelsTouchesInView = NO;
+    self.tapGestureRecognizer.delegate = self;
+    
+    [self addGestureRecognizer:self.tapGestureRecognizer];
+    NSLog(@"%s,%d",__func__,__LINE__);
+    
+}
+-(void)_handleTapGesture:(id)sender{
+    if (self.tapGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        CGPoint touchLocation = [self.tapGestureRecognizer locationOfTouch:0 inView:self];
+        
+        if (_collapseAfterSelection && _isCollapsed == NO && CGRectContainsPoint(self.homeButtonView.frame, touchLocation) == false) {
+            [self dismissButtons];
+        }
+    }
+}
+
+-(void)_animateWithBlock:(void(^)(void))animationBlock{
+    [UIView transitionWithView:self
+                      duration:kDefaultAnimationDuration
+                       options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut animations:animationBlock completion:NULL];
+}
+
+-(void)_setTouchHighlighted:(BOOL)highlighted{
+    float alphaValue = highlighted ? _highlightAlpha : _standbyAlpha;
+    
+    if (self.homeButtonView.alpha == alphaValue) {
+        return;
+    }
+    
+    if (_animationDuration) {
+        [self _animateWithBlock:^{
+            if (self.homeButtonView != nil) {
+                self.homeButtonView.alpha = alphaValue;
+            }
+        }];
+    }else{
+        if (self.homeButtonView != nil) {
+            self.homeButtonView.alpha = alphaValue;
+        }
+    }
+}
+-(float)_combinedButtonHeight{
+    float height = 0;
+    for (UIButton *btn in _buttonContainer) {
+        height += btn.frame.size.height + self.buttonSpacing;
+    }
+    return height;
+}
+
+-(float)_combinedButtonWidth{
+    float width = 0;
+    for (UIButton *btn  in _buttonContainer) {
+        width += btn.frame.size.width + self.buttonSpacing;
+    }
+    return width;
+}
+
+-(void)_prepareForButtonExpansion{
+    float buttonHeight = [self _combinedButtonHeight];
+    float buttonWidth = [self _combinedButtonWidth];
+    
+    switch (self.direction) {
+        case DirectionUp:{
+            self.homeButtonView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+            
+            CGRect frame = self.frame;
+            frame.origin.y -= buttonHeight;
+            frame.size.height += buttonHeight;
+            self.frame = frame;
+        }
+            break;
+        case DirectionDown:{
+            self.homeButtonView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
+            CGRect frame = self.frame;
+            frame.size.height += buttonHeight;
+            self.frame = frame;
+        }
+            break;
+        case DirectionLeft:{
+            self.homeButtonView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+            CGRect frame = self.frame;
+            frame.origin.x -=  buttonWidth;
+            frame.size.width += buttonWidth;
+            self.frame = frame;
+        }
+            break;
+        case DirectionRight:{
+            self.homeButtonView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin;
+            CGRect frame = self.frame;
+            frame.size.width += buttonWidth;
+            self.frame = frame;
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+-(void)_finishCollapse{
+    self.frame = _originFrame;
+}
+
+-(UIView *)_subviewForPoint:(CGPoint)point{
+    for (UIView *subview in self.subviews) {
+        if (CGRectContainsPoint(subview.frame, point)) {
+            return subview;
+        }
+    }
+    return self;
+}
+
+-(NSArray *)_reverseOrderFromArray:(NSArray *)array{
+    NSMutableArray *reverseArray = [NSMutableArray array];
+    for (int i = (int)array.count - 1; i>=0; i--) {
+        [reverseArray addObject:[array objectAtIndex:i]];
+    }
+    return reverseArray;
+}
+#pragma mark -
+#pragma mark Setters/Getters
+-(void)setHomeButtonView:(UIView *)homeButtonView{
+    if (_homeButtonView != homeButtonView) {
+        _homeButtonView = homeButtonView;
+    }
+    if ([_homeButtonView isDescendantOfView:self] == NO) {
+        [self addSubview:_homeButtonView];
+    }
+}
+
+-(NSArray *)buttons{
+    return [_buttonContainer copy];
+}
+
+#pragma mark -
+#pragma mark Touch Handling Methods
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesBegan:touches withEvent:event];
+    UITouch *touch = [touches anyObject];
+    if (CGRectContainsPoint(self.homeButtonView.frame, [touch locationInView:self])) {
+        [self _setTouchHighlighted:YES];
+    }
+}
+
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesEnded:touches withEvent:event];
+    UITouch *touch = [touches anyObject];
+    
+    [self _setTouchHighlighted:NO];
+    
+    if (CGRectContainsPoint(self.homeButtonView.frame, [touch locationInView:self])) {
+        if (_isCollapsed) {
+            [self showButtons];
+        }else{
+            [self dismissButtons];
+        }
+    }
+}
+
+-(void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesCancelled:touches withEvent:event];
+    
+    [self _setTouchHighlighted:NO];
+}
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesMoved:touches withEvent:event];
+    UITouch *touch = [touches anyObject];
+    
+    [self _setTouchHighlighted:CGRectContainsPoint(self.homeButtonView.frame, [touch locationInView:self])];
+}
+
+-(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
+    UIView *hitView = [super hitTest:point withEvent:event];
+    if (hitView == self) {
+        if (_isCollapsed) {
+            return self;
+        }else{
+            return [self _subviewForPoint:point];
+        }
+    }
+    return hitView;
+}
+
+#pragma mark -
+#pragma mark UIGestureRecognizer Delegate
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+    CGPoint touchLocation = [touch locationInView:self];
+    
+    if ([self _subviewForPoint:touchLocation] != self && _collapseAfterSelection) {
+        return YES;
+    }
+    return NO;
+}
+
+#pragma mark -
+#pragma mark Lifecycle
+-(id)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        [self _defaultInit];
+    }
+    return self;
+}
+
+
+-(id)initWithFrame:(CGRect)frame expansionDirection:(ExpansionDirection)direction{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self _defaultInit];
+        _direction = direction;
+    }
+    return self;
+}
+
+
+
+
 @end
+//
+//
+//
+//
+//
+//
+////
+////  YFBubbleMenuButtonViewController.m
+////  BigShow1949
+////
+////  Created by zhht01 on 16/3/30.
+////  Copyright © 2016年 BigShowCompany. All rights reserved.
+////
+//
+//#import "YFBubbleMenuButtonViewController.h"
+//#import "DWBubbleMenuButton.h"
+//
+//@interface YFBubbleMenuButtonViewController ()
+//
+//@end
+//
+//@implementation YFBubbleMenuButtonViewController
+//
+//- (void)viewDidLoad {
+//    
+//    [super viewDidLoad];
+//    self.view.backgroundColor = [UIColor whiteColor];
+//    
+//    // Create down menu button
+//    UILabel *homeLabel = [self createHomeButtonView];
+//    
+//    DWBubbleMenuButton *downMenuButton = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(100.f,
+//                                                                                              100.f,
+//                                                                                              homeLabel.frame.size.width,
+//                                                                                              homeLabel.frame.size.height)
+//                                                                expansionDirection:DirectionDown];
+//    downMenuButton.homeButtonView = homeLabel;
+//    //    downMenuButton.backgroundColor = [UIColor blueColor];
+//    [downMenuButton addButtons:[self createDemoButtonArray]];
+//    
+//    [self.view addSubview:downMenuButton];
+//}
+//
+//- (void)viewDidAppear:(BOOL)animated {
+//    
+//    
+//    //    // Create up menu button
+//    //    homeLabel = [self createHomeButtonView];
+//    //
+//    //    DWBubbleMenuButton *upMenuView = [[DWBubbleMenuButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - homeLabel.frame.size.width - 20.f,
+//    //                                                                                          self.view.frame.size.height - homeLabel.frame.size.height - 20.f,
+//    //                                                                                          homeLabel.frame.size.width,
+//    //                                                                                          homeLabel.frame.size.height)
+//    //                                                            expansionDirection:DirectionUp];
+//    //    upMenuView.homeButtonView = homeLabel;
+//    //
+//    //    [upMenuView addButtons:[self createDemoButtonArray]];
+//    //
+//    //    [self.view addSubview:upMenuView];
+//}
+//
+//- (UILabel *)createHomeButtonView {
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 40.f, 40.f)];
+//    
+//    label.text = @"Tap";
+//    label.textColor = [UIColor whiteColor];
+//    label.textAlignment = NSTextAlignmentCenter;
+//    label.layer.cornerRadius = label.frame.size.height / 2.f;
+//    label.backgroundColor =[UIColor colorWithRed:0.f green:0.f blue:0.f alpha:0.5f];
+//    label.clipsToBounds = YES;
+//    
+//    return label;
+//}
+//
+//- (NSArray *)createDemoButtonArray {
+//    NSMutableArray *buttonsMutable = [[NSMutableArray alloc] init];
+//    
+//    int i = 0;
+//    for (NSString *title in @[@"A", @"B", @"C", @"D", @"E", @"F"]) {
+//        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+//        
+//        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//        [button setTitle:title forState:UIControlStateNormal];
+//        
+//        button.frame = CGRectMake(0.f, 0.f, 30.f, 30.f);
+//        button.layer.cornerRadius = button.frame.size.height / 2.f;
+//        button.backgroundColor = [UIColor colorWithRed:0.f green:0.f blue:0.f alpha:0.5f];
+//        button.clipsToBounds = YES;
+//        button.tag = i++;
+//        
+//        [button addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchUpInside];
+//        
+//        [buttonsMutable addObject:button];
+//    }
+//    
+//    return [buttonsMutable copy];
+//}
+//
+//- (void)test:(UIButton *)sender {
+//    NSLog(@"Button tapped, tag: %ld", (long)sender.tag);
+//}
+//
+//- (UIButton *)createButtonWithName:(NSString *)imageName {
+//    UIButton *button = [[UIButton alloc] init];
+//    [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+//    [button sizeToFit];
+//    
+//    [button addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    return button;
+//}
+//
+//
+//
+//@end
