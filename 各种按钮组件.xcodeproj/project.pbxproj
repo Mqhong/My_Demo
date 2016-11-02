@@ -16,6 +16,9 @@
 		8D6F40E71DC989D400799FD3 /* logo_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6F40E01DC989D400799FD3 /* logo_@2x.png */; };
 		8D6F40E81DC989D400799FD3 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40E21DC989D400799FD3 /* MMMaterialDesignSpinner.m */; };
 		8D6F40E91DC989D400799FD3 /* Show_We_Chat_Btn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40E41DC989D400799FD3 /* Show_We_Chat_Btn.m */; };
+		8D6F40EC1DC98CD500799FD3 /* MM_HorizontalPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40EB1DC98CD500799FD3 /* MM_HorizontalPagingView.m */; };
+		8D6F40EF1DC9DBCC00799FD3 /* ShowPagingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40EE1DC9DBCC00799FD3 /* ShowPagingController.m */; };
+		8D6F40F21DC9E43900799FD3 /* HHContentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40F11DC9E43900799FD3 /* HHContentTableView.m */; };
 		8DA92D9F1DC1D2780052AEBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92D9E1DC1D2780052AEBE /* main.m */; };
 		8DA92DA21DC1D2780052AEBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92DA11DC1D2780052AEBE /* AppDelegate.m */; };
 		8DA92DA51DC1D2780052AEBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92DA41DC1D2780052AEBE /* ViewController.m */; };
@@ -42,6 +45,12 @@
 		8D6F40E21DC989D400799FD3 /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
 		8D6F40E31DC989D400799FD3 /* Show_We_Chat_Btn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Show_We_Chat_Btn.h; sourceTree = "<group>"; };
 		8D6F40E41DC989D400799FD3 /* Show_We_Chat_Btn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Show_We_Chat_Btn.m; sourceTree = "<group>"; };
+		8D6F40EA1DC98CD500799FD3 /* MM_HorizontalPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MM_HorizontalPagingView.h; sourceTree = "<group>"; };
+		8D6F40EB1DC98CD500799FD3 /* MM_HorizontalPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MM_HorizontalPagingView.m; sourceTree = "<group>"; };
+		8D6F40ED1DC9DBCC00799FD3 /* ShowPagingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowPagingController.h; sourceTree = "<group>"; };
+		8D6F40EE1DC9DBCC00799FD3 /* ShowPagingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPagingController.m; sourceTree = "<group>"; };
+		8D6F40F01DC9E43900799FD3 /* HHContentTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHContentTableView.h; sourceTree = "<group>"; };
+		8D6F40F11DC9E43900799FD3 /* HHContentTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHContentTableView.m; sourceTree = "<group>"; };
 		8DA92D9A1DC1D2780052AEBE /* 各种按钮组件.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "各种按钮组件.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA92D9E1DC1D2780052AEBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DA92DA01DC1D2780052AEBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +105,12 @@
 		8D6F40DB1DC9897F00799FD3 /* 滑动悬浮视图 */ = {
 			isa = PBXGroup;
 			children = (
+				8D6F40F01DC9E43900799FD3 /* HHContentTableView.h */,
+				8D6F40F11DC9E43900799FD3 /* HHContentTableView.m */,
+				8D6F40EA1DC98CD500799FD3 /* MM_HorizontalPagingView.h */,
+				8D6F40EB1DC98CD500799FD3 /* MM_HorizontalPagingView.m */,
+				8D6F40ED1DC9DBCC00799FD3 /* ShowPagingController.h */,
+				8D6F40EE1DC9DBCC00799FD3 /* ShowPagingController.m */,
 			);
 			path = "滑动悬浮视图";
 			sourceTree = "<group>";
@@ -247,9 +262,12 @@
 				8DA92DA21DC1D2780052AEBE /* AppDelegate.m in Sources */,
 				8DA92D9F1DC1D2780052AEBE /* main.m in Sources */,
 				8D6F40E61DC989D400799FD3 /* DeformationButton.m in Sources */,
+				8D6F40F21DC9E43900799FD3 /* HHContentTableView.m in Sources */,
 				8DA92DC41DC2F0720052AEBE /* BaseTableViewController.m in Sources */,
 				8D6F40C51DC988B800799FD3 /* MM_Btn_Show.m in Sources */,
+				8D6F40EF1DC9DBCC00799FD3 /* ShowPagingController.m in Sources */,
 				8DA92DC71DC2FA260052AEBE /* MM_HomeViewController.m in Sources */,
+				8D6F40EC1DC98CD500799FD3 /* MM_HorizontalPagingView.m in Sources */,
 				8D6F40D01DC9896F00799FD3 /* MMBubbleMenuButton.m in Sources */,
 				8D6F40CF1DC9896F00799FD3 /* DWBubbleMenuButton.m in Sources */,
 				8D6F40E91DC989D400799FD3 /* Show_We_Chat_Btn.m in Sources */,
