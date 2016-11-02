@@ -7,25 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D6F40C51DC988B800799FD3 /* MM_Btn_Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40B81DC988B800799FD3 /* MM_Btn_Show.m */; };
+		8D6F40C81DC988B800799FD3 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6F40BD1DC988B800799FD3 /* Reveal.framework */; };
+		8D6F40CF1DC9896F00799FD3 /* DWBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40CC1DC9896F00799FD3 /* DWBubbleMenuButton.m */; };
+		8D6F40D01DC9896F00799FD3 /* MMBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40CE1DC9896F00799FD3 /* MMBubbleMenuButton.m */; };
+		8D6F40E51DC989D400799FD3 /* button_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6F40DD1DC989D400799FD3 /* button_bg@2x.png */; };
+		8D6F40E61DC989D400799FD3 /* DeformationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40DF1DC989D400799FD3 /* DeformationButton.m */; };
+		8D6F40E71DC989D400799FD3 /* logo_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6F40E01DC989D400799FD3 /* logo_@2x.png */; };
+		8D6F40E81DC989D400799FD3 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40E21DC989D400799FD3 /* MMMaterialDesignSpinner.m */; };
+		8D6F40E91DC989D400799FD3 /* Show_We_Chat_Btn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40E41DC989D400799FD3 /* Show_We_Chat_Btn.m */; };
 		8DA92D9F1DC1D2780052AEBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92D9E1DC1D2780052AEBE /* main.m */; };
 		8DA92DA21DC1D2780052AEBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92DA11DC1D2780052AEBE /* AppDelegate.m */; };
 		8DA92DA51DC1D2780052AEBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92DA41DC1D2780052AEBE /* ViewController.m */; };
 		8DA92DA81DC1D2780052AEBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA92DA61DC1D2780052AEBE /* Main.storyboard */; };
 		8DA92DAA1DC1D2780052AEBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DA92DA91DC1D2780052AEBE /* Assets.xcassets */; };
 		8DA92DAD1DC1D2780052AEBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA92DAB1DC1D2780052AEBE /* LaunchScreen.storyboard */; };
-		8DA92DB61DC1D9230052AEBE /* button_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DA92DB51DC1D9230052AEBE /* button_bg@2x.png */; };
-		8DA92DB81DC1D92E0052AEBE /* logo_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DA92DB71DC1D92E0052AEBE /* logo_@2x.png */; };
-		8DA92DBB1DC1D9720052AEBE /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92DBA1DC1D9720052AEBE /* MMMaterialDesignSpinner.m */; };
-		8DA92DBE1DC1EE800052AEBE /* DeformationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92DBD1DC1EE800052AEBE /* DeformationButton.m */; };
 		8DA92DC41DC2F0720052AEBE /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92DC31DC2F0720052AEBE /* BaseTableViewController.m */; };
 		8DA92DC71DC2FA260052AEBE /* MM_HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92DC61DC2FA260052AEBE /* MM_HomeViewController.m */; };
-		8DA92DCA1DC2FBBD0052AEBE /* MM_Btn_Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92DC91DC2FBBD0052AEBE /* MM_Btn_Show.m */; };
-		8DA92DCE1DC3190E0052AEBE /* Show_We_Chat_Btn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92DCD1DC3190E0052AEBE /* Show_We_Chat_Btn.m */; };
-		8DDDE2121DC3246300F43051 /* DWBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DDDE2111DC3246300F43051 /* DWBubbleMenuButton.m */; };
-		8DEE65E81DC8250A00DB30A8 /* MMBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE65E71DC8250A00DB30A8 /* MMBubbleMenuButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D6F40B71DC988B800799FD3 /* MM_Btn_Show.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MM_Btn_Show.h; sourceTree = "<group>"; };
+		8D6F40B81DC988B800799FD3 /* MM_Btn_Show.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MM_Btn_Show.m; sourceTree = "<group>"; };
+		8D6F40BD1DC988B800799FD3 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		8D6F40CB1DC9896F00799FD3 /* DWBubbleMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBubbleMenuButton.h; sourceTree = "<group>"; };
+		8D6F40CC1DC9896F00799FD3 /* DWBubbleMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBubbleMenuButton.m; sourceTree = "<group>"; };
+		8D6F40CD1DC9896F00799FD3 /* MMBubbleMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBubbleMenuButton.h; sourceTree = "<group>"; };
+		8D6F40CE1DC9896F00799FD3 /* MMBubbleMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBubbleMenuButton.m; sourceTree = "<group>"; };
+		8D6F40DD1DC989D400799FD3 /* button_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_bg@2x.png"; sourceTree = "<group>"; };
+		8D6F40DE1DC989D400799FD3 /* DeformationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeformationButton.h; sourceTree = "<group>"; };
+		8D6F40DF1DC989D400799FD3 /* DeformationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeformationButton.m; sourceTree = "<group>"; };
+		8D6F40E01DC989D400799FD3 /* logo_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_@2x.png"; sourceTree = "<group>"; };
+		8D6F40E11DC989D400799FD3 /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
+		8D6F40E21DC989D400799FD3 /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
+		8D6F40E31DC989D400799FD3 /* Show_We_Chat_Btn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Show_We_Chat_Btn.h; sourceTree = "<group>"; };
+		8D6F40E41DC989D400799FD3 /* Show_We_Chat_Btn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Show_We_Chat_Btn.m; sourceTree = "<group>"; };
 		8DA92D9A1DC1D2780052AEBE /* 各种按钮组件.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "各种按钮组件.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA92D9E1DC1D2780052AEBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DA92DA01DC1D2780052AEBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,25 +52,10 @@
 		8DA92DA91DC1D2780052AEBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DA92DAC1DC1D2780052AEBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DA92DAE1DC1D2780052AEBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DA92DB51DC1D9230052AEBE /* button_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button_bg@2x.png"; path = "../button_bg@2x.png"; sourceTree = "<group>"; };
-		8DA92DB71DC1D92E0052AEBE /* logo_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo_@2x.png"; path = "../logo_@2x.png"; sourceTree = "<group>"; };
-		8DA92DB91DC1D9720052AEBE /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
-		8DA92DBA1DC1D9720052AEBE /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
-		8DA92DBC1DC1EE800052AEBE /* DeformationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeformationButton.h; sourceTree = "<group>"; };
-		8DA92DBD1DC1EE800052AEBE /* DeformationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeformationButton.m; sourceTree = "<group>"; };
-		8DA92DBF1DC2E6890052AEBE /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		8DA92DC21DC2F0720052AEBE /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		8DA92DC31DC2F0720052AEBE /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		8DA92DC51DC2FA260052AEBE /* MM_HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MM_HomeViewController.h; sourceTree = "<group>"; };
 		8DA92DC61DC2FA260052AEBE /* MM_HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MM_HomeViewController.m; sourceTree = "<group>"; };
-		8DA92DC81DC2FBBD0052AEBE /* MM_Btn_Show.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MM_Btn_Show.h; sourceTree = "<group>"; };
-		8DA92DC91DC2FBBD0052AEBE /* MM_Btn_Show.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MM_Btn_Show.m; sourceTree = "<group>"; };
-		8DA92DCC1DC3190E0052AEBE /* Show_We_Chat_Btn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Show_We_Chat_Btn.h; sourceTree = "<group>"; };
-		8DA92DCD1DC3190E0052AEBE /* Show_We_Chat_Btn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Show_We_Chat_Btn.m; sourceTree = "<group>"; };
-		8DDDE2101DC3246300F43051 /* DWBubbleMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBubbleMenuButton.h; sourceTree = "<group>"; };
-		8DDDE2111DC3246300F43051 /* DWBubbleMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBubbleMenuButton.m; sourceTree = "<group>"; };
-		8DEE65E61DC8250A00DB30A8 /* MMBubbleMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBubbleMenuButton.h; sourceTree = "<group>"; };
-		8DEE65E71DC8250A00DB30A8 /* MMBubbleMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBubbleMenuButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +63,58 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6F40C81DC988B800799FD3 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D6F40B21DC988B800799FD3 /* 按钮组件 */ = {
+			isa = PBXGroup;
+			children = (
+				8D6F40DC1DC989D400799FD3 /* 仿微信登录按钮 */,
+				8D6F40CA1DC9896F00799FD3 /* 仿猿题库按钮菜单 */,
+				8D6F40B71DC988B800799FD3 /* MM_Btn_Show.h */,
+				8D6F40B81DC988B800799FD3 /* MM_Btn_Show.m */,
+				8D6F40BD1DC988B800799FD3 /* Reveal.framework */,
+			);
+			path = "按钮组件";
+			sourceTree = "<group>";
+		};
+		8D6F40CA1DC9896F00799FD3 /* 仿猿题库按钮菜单 */ = {
+			isa = PBXGroup;
+			children = (
+				8D6F40CB1DC9896F00799FD3 /* DWBubbleMenuButton.h */,
+				8D6F40CC1DC9896F00799FD3 /* DWBubbleMenuButton.m */,
+				8D6F40CD1DC9896F00799FD3 /* MMBubbleMenuButton.h */,
+				8D6F40CE1DC9896F00799FD3 /* MMBubbleMenuButton.m */,
+			);
+			path = "仿猿题库按钮菜单";
+			sourceTree = "<group>";
+		};
+		8D6F40DB1DC9897F00799FD3 /* 滑动悬浮视图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "滑动悬浮视图";
+			sourceTree = "<group>";
+		};
+		8D6F40DC1DC989D400799FD3 /* 仿微信登录按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				8D6F40DD1DC989D400799FD3 /* button_bg@2x.png */,
+				8D6F40DE1DC989D400799FD3 /* DeformationButton.h */,
+				8D6F40DF1DC989D400799FD3 /* DeformationButton.m */,
+				8D6F40E01DC989D400799FD3 /* logo_@2x.png */,
+				8D6F40E11DC989D400799FD3 /* MMMaterialDesignSpinner.h */,
+				8D6F40E21DC989D400799FD3 /* MMMaterialDesignSpinner.m */,
+				8D6F40E31DC989D400799FD3 /* Show_We_Chat_Btn.h */,
+				8D6F40E41DC989D400799FD3 /* Show_We_Chat_Btn.m */,
+			);
+			path = "仿微信登录按钮";
+			sourceTree = "<group>";
+		};
 		8DA92D911DC1D2780052AEBE = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +134,8 @@
 		8DA92D9C1DC1D2780052AEBE /* 各种按钮组件 */ = {
 			isa = PBXGroup;
 			children = (
-				8DA92DB41DC1D29D0052AEBE /* 组件 */,
+				8D6F40DB1DC9897F00799FD3 /* 滑动悬浮视图 */,
+				8D6F40B21DC988B800799FD3 /* 按钮组件 */,
 				8DA92DC11DC2F0500052AEBE /* 基础类 */,
 				8DA92DA01DC1D2780052AEBE /* AppDelegate.h */,
 				8DA92DA11DC1D2780052AEBE /* AppDelegate.m */,
@@ -112,18 +160,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8DA92DB41DC1D29D0052AEBE /* 组件 */ = {
-			isa = PBXGroup;
-			children = (
-				8DDDE20F1DC323F300F43051 /* 仿猿题库按钮菜单 */,
-				8DA92DCB1DC317B80052AEBE /* 仿制微信按钮 */,
-				8DA92DBF1DC2E6890052AEBE /* Reveal.framework */,
-				8DA92DC81DC2FBBD0052AEBE /* MM_Btn_Show.h */,
-				8DA92DC91DC2FBBD0052AEBE /* MM_Btn_Show.m */,
-			);
-			path = "组件";
-			sourceTree = "<group>";
-		};
 		8DA92DC11DC2F0500052AEBE /* 基础类 */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,32 +167,6 @@
 				8DA92DC31DC2F0720052AEBE /* BaseTableViewController.m */,
 			);
 			path = "基础类";
-			sourceTree = "<group>";
-		};
-		8DA92DCB1DC317B80052AEBE /* 仿制微信按钮 */ = {
-			isa = PBXGroup;
-			children = (
-				8DA92DB71DC1D92E0052AEBE /* logo_@2x.png */,
-				8DA92DB51DC1D9230052AEBE /* button_bg@2x.png */,
-				8DA92DB91DC1D9720052AEBE /* MMMaterialDesignSpinner.h */,
-				8DA92DBA1DC1D9720052AEBE /* MMMaterialDesignSpinner.m */,
-				8DA92DBC1DC1EE800052AEBE /* DeformationButton.h */,
-				8DA92DBD1DC1EE800052AEBE /* DeformationButton.m */,
-				8DA92DCC1DC3190E0052AEBE /* Show_We_Chat_Btn.h */,
-				8DA92DCD1DC3190E0052AEBE /* Show_We_Chat_Btn.m */,
-			);
-			name = "仿制微信按钮";
-			sourceTree = "<group>";
-		};
-		8DDDE20F1DC323F300F43051 /* 仿猿题库按钮菜单 */ = {
-			isa = PBXGroup;
-			children = (
-				8DDDE2101DC3246300F43051 /* DWBubbleMenuButton.h */,
-				8DDDE2111DC3246300F43051 /* DWBubbleMenuButton.m */,
-				8DEE65E61DC8250A00DB30A8 /* MMBubbleMenuButton.h */,
-				8DEE65E71DC8250A00DB30A8 /* MMBubbleMenuButton.m */,
-			);
-			name = "仿猿题库按钮菜单";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,9 +228,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DA92DAD1DC1D2780052AEBE /* LaunchScreen.storyboard in Resources */,
-				8DA92DB61DC1D9230052AEBE /* button_bg@2x.png in Resources */,
+				8D6F40E51DC989D400799FD3 /* button_bg@2x.png in Resources */,
 				8DA92DAA1DC1D2780052AEBE /* Assets.xcassets in Resources */,
-				8DA92DB81DC1D92E0052AEBE /* logo_@2x.png in Resources */,
+				8D6F40E71DC989D400799FD3 /* logo_@2x.png in Resources */,
 				8DA92DA81DC1D2780052AEBE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,17 +242,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6F40E81DC989D400799FD3 /* MMMaterialDesignSpinner.m in Sources */,
 				8DA92DA51DC1D2780052AEBE /* ViewController.m in Sources */,
 				8DA92DA21DC1D2780052AEBE /* AppDelegate.m in Sources */,
-				8DA92DCE1DC3190E0052AEBE /* Show_We_Chat_Btn.m in Sources */,
-				8DA92DBB1DC1D9720052AEBE /* MMMaterialDesignSpinner.m in Sources */,
-				8DEE65E81DC8250A00DB30A8 /* MMBubbleMenuButton.m in Sources */,
 				8DA92D9F1DC1D2780052AEBE /* main.m in Sources */,
-				8DDDE2121DC3246300F43051 /* DWBubbleMenuButton.m in Sources */,
+				8D6F40E61DC989D400799FD3 /* DeformationButton.m in Sources */,
 				8DA92DC41DC2F0720052AEBE /* BaseTableViewController.m in Sources */,
-				8DA92DCA1DC2FBBD0052AEBE /* MM_Btn_Show.m in Sources */,
+				8D6F40C51DC988B800799FD3 /* MM_Btn_Show.m in Sources */,
 				8DA92DC71DC2FA260052AEBE /* MM_HomeViewController.m in Sources */,
-				8DA92DBE1DC1EE800052AEBE /* DeformationButton.m in Sources */,
+				8D6F40D01DC9896F00799FD3 /* MMBubbleMenuButton.m in Sources */,
+				8D6F40CF1DC9896F00799FD3 /* DWBubbleMenuButton.m in Sources */,
+				8D6F40E91DC989D400799FD3 /* Show_We_Chat_Btn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +373,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/各种按钮组件/组件",
+					"$(PROJECT_DIR)/各种按钮组件/按钮组件",
 				);
 				INFOPLIST_FILE = "各种按钮组件/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -384,6 +395,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/各种按钮组件/组件",
+					"$(PROJECT_DIR)/各种按钮组件/按钮组件",
 				);
 				INFOPLIST_FILE = "各种按钮组件/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
