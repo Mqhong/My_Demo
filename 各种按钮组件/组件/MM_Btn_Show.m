@@ -12,8 +12,10 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    self.titles = @[@"微信注册按钮"];
-    self.classNames = @[@"Show_We_Chat_Btn"];
+    self.titles = @[@"微信注册按钮",
+                    @"仿猿题库按钮菜单"];
+    self.classNames = @[@"Show_We_Chat_Btn",
+                        @"MMBubbleMenuButton"];
 }
 
 @end

@@ -22,6 +22,7 @@
 		8DA92DCA1DC2FBBD0052AEBE /* MM_Btn_Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92DC91DC2FBBD0052AEBE /* MM_Btn_Show.m */; };
 		8DA92DCE1DC3190E0052AEBE /* Show_We_Chat_Btn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92DCD1DC3190E0052AEBE /* Show_We_Chat_Btn.m */; };
 		8DDDE2121DC3246300F43051 /* DWBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DDDE2111DC3246300F43051 /* DWBubbleMenuButton.m */; };
+		8DEE65E81DC8250A00DB30A8 /* MMBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE65E71DC8250A00DB30A8 /* MMBubbleMenuButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		8DA92DCD1DC3190E0052AEBE /* Show_We_Chat_Btn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Show_We_Chat_Btn.m; sourceTree = "<group>"; };
 		8DDDE2101DC3246300F43051 /* DWBubbleMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWBubbleMenuButton.h; sourceTree = "<group>"; };
 		8DDDE2111DC3246300F43051 /* DWBubbleMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWBubbleMenuButton.m; sourceTree = "<group>"; };
+		8DEE65E61DC8250A00DB30A8 /* MMBubbleMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMBubbleMenuButton.h; sourceTree = "<group>"; };
+		8DEE65E71DC8250A00DB30A8 /* MMBubbleMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBubbleMenuButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,8 @@
 			children = (
 				8DDDE2101DC3246300F43051 /* DWBubbleMenuButton.h */,
 				8DDDE2111DC3246300F43051 /* DWBubbleMenuButton.m */,
+				8DEE65E61DC8250A00DB30A8 /* MMBubbleMenuButton.h */,
+				8DEE65E71DC8250A00DB30A8 /* MMBubbleMenuButton.m */,
 			);
 			name = "仿猿题库按钮菜单";
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 				8DA92DA21DC1D2780052AEBE /* AppDelegate.m in Sources */,
 				8DA92DCE1DC3190E0052AEBE /* Show_We_Chat_Btn.m in Sources */,
 				8DA92DBB1DC1D9720052AEBE /* MMMaterialDesignSpinner.m in Sources */,
+				8DEE65E81DC8250A00DB30A8 /* MMBubbleMenuButton.m in Sources */,
 				8DA92D9F1DC1D2780052AEBE /* main.m in Sources */,
 				8DDDE2121DC3246300F43051 /* DWBubbleMenuButton.m in Sources */,
 				8DA92DC41DC2F0720052AEBE /* BaseTableViewController.m in Sources */,

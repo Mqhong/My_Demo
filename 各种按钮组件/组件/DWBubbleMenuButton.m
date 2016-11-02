@@ -182,7 +182,7 @@ static float kDefaultAnimationDuration = 0.25f;
         button.transform = CGAffineTransformMakeScale(1.f, 1.f);
         
         //position animation
-        CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"postion"];
+        CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
         
         CGPoint originPosition = button.layer.position;
         CGPoint finalPosition = CGPointZero;
