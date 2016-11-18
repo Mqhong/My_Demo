@@ -41,7 +41,8 @@
         [segmentButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         [buttonArray addObject:segmentButton];
     }
-    MM_HorizontalPagingView *pagingView = [MM_HorizontalPagingView pagingViewWithHeaderView:headerView headerHeight:0.f segmentButtons:buttonArray segmentHeight:60 contentViews:viewArray];
+    MM_HorizontalPagingView *pagingView = [MM_HorizontalPagingView pagingViewWithHeaderView:headerView headerHeight:0.f segmentButtons:buttonArray segmentHeight:100 contentViews:viewArray];
+    pagingView.segmentTopSpace = 100;
     
     [self.view addSubview:pagingView];
 }

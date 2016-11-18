@@ -13,13 +13,15 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.titles = @[@"按钮",
-                    @"滚动悬浮视图"];
+                    @"滚动悬浮视图",
+                    @"引导界面"];
     
     //框架模式有哪些？
     //MVC,MTV,MVP,CBD,ORM等
     
     self.classNames = @[@"MM_Btn_Show",
-                        @"ShowPagingController"];
+                        @"ShowPagingController",
+                        @"ShowGradualChangeViewController"];
     [self setupNav];
 }
 

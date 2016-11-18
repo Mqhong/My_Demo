@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D2A7E981DDE958F00C51EFE /* MMIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A7E971DDE958F00C51EFE /* MMIntroductionViewController.m */; };
+		8D2A7E9C1DDEA8AF00C51EFE /* ShowGradualChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A7E9B1DDEA8AF00C51EFE /* ShowGradualChangeViewController.m */; };
+		8D2A7E9F1DDEAA8F00C51EFE /* MMShowTheIntroduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A7E9E1DDEAA8F00C51EFE /* MMShowTheIntroduct.m */; };
+		8D2A7EA31DDEC6ED00C51EFE /* MMRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A7EA21DDEC6ED00C51EFE /* MMRoundedButton.m */; };
+		8D2A7EA61DDEC98100C51EFE /* ShowMMRoundeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A7EA51DDEC98100C51EFE /* ShowMMRoundeButton.m */; };
 		8D6F40C51DC988B800799FD3 /* MM_Btn_Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40B81DC988B800799FD3 /* MM_Btn_Show.m */; };
 		8D6F40C81DC988B800799FD3 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6F40BD1DC988B800799FD3 /* Reveal.framework */; };
 		8D6F40CF1DC9896F00799FD3 /* DWBubbleMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40CC1DC9896F00799FD3 /* DWBubbleMenuButton.m */; };
@@ -30,6 +35,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D2A7E961DDE958F00C51EFE /* MMIntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMIntroductionViewController.h; sourceTree = "<group>"; };
+		8D2A7E971DDE958F00C51EFE /* MMIntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMIntroductionViewController.m; sourceTree = "<group>"; };
+		8D2A7E9A1DDEA8AF00C51EFE /* ShowGradualChangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowGradualChangeViewController.h; sourceTree = "<group>"; };
+		8D2A7E9B1DDEA8AF00C51EFE /* ShowGradualChangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowGradualChangeViewController.m; sourceTree = "<group>"; };
+		8D2A7E9D1DDEAA8F00C51EFE /* MMShowTheIntroduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMShowTheIntroduct.h; sourceTree = "<group>"; };
+		8D2A7E9E1DDEAA8F00C51EFE /* MMShowTheIntroduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMShowTheIntroduct.m; sourceTree = "<group>"; };
+		8D2A7EA11DDEC6ED00C51EFE /* MMRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMRoundedButton.h; sourceTree = "<group>"; };
+		8D2A7EA21DDEC6ED00C51EFE /* MMRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMRoundedButton.m; sourceTree = "<group>"; };
+		8D2A7EA41DDEC98100C51EFE /* ShowMMRoundeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowMMRoundeButton.h; sourceTree = "<group>"; };
+		8D2A7EA51DDEC98100C51EFE /* ShowMMRoundeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowMMRoundeButton.m; sourceTree = "<group>"; };
 		8D6F40B71DC988B800799FD3 /* MM_Btn_Show.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MM_Btn_Show.h; sourceTree = "<group>"; };
 		8D6F40B81DC988B800799FD3 /* MM_Btn_Show.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MM_Btn_Show.m; sourceTree = "<group>"; };
 		8D6F40BD1DC988B800799FD3 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
@@ -79,9 +94,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D2A7E991DDEA87A00C51EFE /* 滑动引导 */ = {
+			isa = PBXGroup;
+			children = (
+				8D2A7E961DDE958F00C51EFE /* MMIntroductionViewController.h */,
+				8D2A7E971DDE958F00C51EFE /* MMIntroductionViewController.m */,
+				8D2A7E9D1DDEAA8F00C51EFE /* MMShowTheIntroduct.h */,
+				8D2A7E9E1DDEAA8F00C51EFE /* MMShowTheIntroduct.m */,
+			);
+			name = "滑动引导";
+			sourceTree = "<group>";
+		};
+		8D2A7EA01DDEC6CC00C51EFE /* 各种类型的按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				8D2A7EA11DDEC6ED00C51EFE /* MMRoundedButton.h */,
+				8D2A7EA21DDEC6ED00C51EFE /* MMRoundedButton.m */,
+				8D2A7EA41DDEC98100C51EFE /* ShowMMRoundeButton.h */,
+				8D2A7EA51DDEC98100C51EFE /* ShowMMRoundeButton.m */,
+			);
+			path = "各种类型的按钮";
+			sourceTree = "<group>";
+		};
 		8D6F40B21DC988B800799FD3 /* 按钮组件 */ = {
 			isa = PBXGroup;
 			children = (
+				8D2A7EA01DDEC6CC00C51EFE /* 各种类型的按钮 */,
 				8D6F40DC1DC989D400799FD3 /* 仿微信登录按钮 */,
 				8D6F40CA1DC9896F00799FD3 /* 仿猿题库按钮菜单 */,
 				8D6F40B71DC988B800799FD3 /* MM_Btn_Show.h */,
@@ -130,6 +168,16 @@
 			path = "仿微信登录按钮";
 			sourceTree = "<group>";
 		};
+		8D72CC601DDD50BB00643DDD /* 引导界面 */ = {
+			isa = PBXGroup;
+			children = (
+				8D2A7E991DDEA87A00C51EFE /* 滑动引导 */,
+				8D2A7E9A1DDEA8AF00C51EFE /* ShowGradualChangeViewController.h */,
+				8D2A7E9B1DDEA8AF00C51EFE /* ShowGradualChangeViewController.m */,
+			);
+			path = "引导界面";
+			sourceTree = "<group>";
+		};
 		8DA92D911DC1D2780052AEBE = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +197,7 @@
 		8DA92D9C1DC1D2780052AEBE /* 各种按钮组件 */ = {
 			isa = PBXGroup;
 			children = (
+				8D72CC601DDD50BB00643DDD /* 引导界面 */,
 				8D6F40DB1DC9897F00799FD3 /* 滑动悬浮视图 */,
 				8D6F40B21DC988B800799FD3 /* 按钮组件 */,
 				8DA92DC11DC2F0500052AEBE /* 基础类 */,
@@ -259,18 +308,23 @@
 			files = (
 				8D6F40E81DC989D400799FD3 /* MMMaterialDesignSpinner.m in Sources */,
 				8DA92DA51DC1D2780052AEBE /* ViewController.m in Sources */,
+				8D2A7E981DDE958F00C51EFE /* MMIntroductionViewController.m in Sources */,
 				8DA92DA21DC1D2780052AEBE /* AppDelegate.m in Sources */,
 				8DA92D9F1DC1D2780052AEBE /* main.m in Sources */,
 				8D6F40E61DC989D400799FD3 /* DeformationButton.m in Sources */,
+				8D2A7E9C1DDEA8AF00C51EFE /* ShowGradualChangeViewController.m in Sources */,
 				8D6F40F21DC9E43900799FD3 /* HHContentTableView.m in Sources */,
 				8DA92DC41DC2F0720052AEBE /* BaseTableViewController.m in Sources */,
 				8D6F40C51DC988B800799FD3 /* MM_Btn_Show.m in Sources */,
 				8D6F40EF1DC9DBCC00799FD3 /* ShowPagingController.m in Sources */,
 				8DA92DC71DC2FA260052AEBE /* MM_HomeViewController.m in Sources */,
 				8D6F40EC1DC98CD500799FD3 /* MM_HorizontalPagingView.m in Sources */,
+				8D2A7EA61DDEC98100C51EFE /* ShowMMRoundeButton.m in Sources */,
 				8D6F40D01DC9896F00799FD3 /* MMBubbleMenuButton.m in Sources */,
 				8D6F40CF1DC9896F00799FD3 /* DWBubbleMenuButton.m in Sources */,
 				8D6F40E91DC989D400799FD3 /* Show_We_Chat_Btn.m in Sources */,
+				8D2A7E9F1DDEAA8F00C51EFE /* MMShowTheIntroduct.m in Sources */,
+				8D2A7EA31DDEC6ED00C51EFE /* MMRoundedButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
