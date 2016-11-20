@@ -24,6 +24,11 @@
 		8D6F40EC1DC98CD500799FD3 /* MM_HorizontalPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40EB1DC98CD500799FD3 /* MM_HorizontalPagingView.m */; };
 		8D6F40EF1DC9DBCC00799FD3 /* ShowPagingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40EE1DC9DBCC00799FD3 /* ShowPagingController.m */; };
 		8D6F40F21DC9E43900799FD3 /* HHContentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F40F11DC9E43900799FD3 /* HHContentTableView.m */; };
+		8DA8DAB11DE1967400A14B90 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA8DAB01DE1967400A14B90 /* UIView+Extension.m */; };
+		8DA8DAB41DE197B400A14B90 /* UIBarButtonItem+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA8DAB31DE197B400A14B90 /* UIBarButtonItem+Category.m */; };
+		8DA8DAB71DE19A4D00A14B90 /* MMDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA8DAB61DE19A4D00A14B90 /* MMDropDownMenu.m */; };
+		8DA8DABA1DE1A89400A14B90 /* DropDownContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA8DAB91DE1A89400A14B90 /* DropDownContent.m */; };
+		8DA8DABD1DE1A90E00A14B90 /* ShowDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA8DABC1DE1A90E00A14B90 /* ShowDropDown.m */; };
 		8DA92D9F1DC1D2780052AEBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92D9E1DC1D2780052AEBE /* main.m */; };
 		8DA92DA21DC1D2780052AEBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92DA11DC1D2780052AEBE /* AppDelegate.m */; };
 		8DA92DA51DC1D2780052AEBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA92DA41DC1D2780052AEBE /* ViewController.m */; };
@@ -66,6 +71,16 @@
 		8D6F40EE1DC9DBCC00799FD3 /* ShowPagingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPagingController.m; sourceTree = "<group>"; };
 		8D6F40F01DC9E43900799FD3 /* HHContentTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHContentTableView.h; sourceTree = "<group>"; };
 		8D6F40F11DC9E43900799FD3 /* HHContentTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHContentTableView.m; sourceTree = "<group>"; };
+		8DA8DAAF1DE1967400A14B90 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		8DA8DAB01DE1967400A14B90 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		8DA8DAB21DE197B400A14B90 /* UIBarButtonItem+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Category.h"; sourceTree = "<group>"; };
+		8DA8DAB31DE197B400A14B90 /* UIBarButtonItem+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Category.m"; sourceTree = "<group>"; };
+		8DA8DAB51DE19A4D00A14B90 /* MMDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDropDownMenu.h; sourceTree = "<group>"; };
+		8DA8DAB61DE19A4D00A14B90 /* MMDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDropDownMenu.m; sourceTree = "<group>"; };
+		8DA8DAB81DE1A89400A14B90 /* DropDownContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownContent.h; sourceTree = "<group>"; };
+		8DA8DAB91DE1A89400A14B90 /* DropDownContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownContent.m; sourceTree = "<group>"; };
+		8DA8DABB1DE1A90E00A14B90 /* ShowDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDropDown.h; sourceTree = "<group>"; };
+		8DA8DABC1DE1A90E00A14B90 /* ShowDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDropDown.m; sourceTree = "<group>"; };
 		8DA92D9A1DC1D2780052AEBE /* 各种按钮组件.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "各种按钮组件.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA92D9E1DC1D2780052AEBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DA92DA01DC1D2780052AEBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,6 +134,7 @@
 		8D6F40B21DC988B800799FD3 /* 按钮组件 */ = {
 			isa = PBXGroup;
 			children = (
+				8DA8DAAD1DE195EA00A14B90 /* 下拉菜单 */,
 				8D2A7EA01DDEC6CC00C51EFE /* 各种类型的按钮 */,
 				8D6F40DC1DC989D400799FD3 /* 仿微信登录按钮 */,
 				8D6F40CA1DC9896F00799FD3 /* 仿猿题库按钮菜单 */,
@@ -178,6 +194,30 @@
 			path = "引导界面";
 			sourceTree = "<group>";
 		};
+		8DA8DAAD1DE195EA00A14B90 /* 下拉菜单 */ = {
+			isa = PBXGroup;
+			children = (
+				8DA8DAB51DE19A4D00A14B90 /* MMDropDownMenu.h */,
+				8DA8DAB61DE19A4D00A14B90 /* MMDropDownMenu.m */,
+				8DA8DAB81DE1A89400A14B90 /* DropDownContent.h */,
+				8DA8DAB91DE1A89400A14B90 /* DropDownContent.m */,
+				8DA8DABB1DE1A90E00A14B90 /* ShowDropDown.h */,
+				8DA8DABC1DE1A90E00A14B90 /* ShowDropDown.m */,
+			);
+			path = "下拉菜单";
+			sourceTree = "<group>";
+		};
+		8DA8DAAE1DE1966700A14B90 /* 常用的分类 */ = {
+			isa = PBXGroup;
+			children = (
+				8DA8DAAF1DE1967400A14B90 /* UIView+Extension.h */,
+				8DA8DAB01DE1967400A14B90 /* UIView+Extension.m */,
+				8DA8DAB21DE197B400A14B90 /* UIBarButtonItem+Category.h */,
+				8DA8DAB31DE197B400A14B90 /* UIBarButtonItem+Category.m */,
+			);
+			path = "常用的分类";
+			sourceTree = "<group>";
+		};
 		8DA92D911DC1D2780052AEBE = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +237,7 @@
 		8DA92D9C1DC1D2780052AEBE /* 各种按钮组件 */ = {
 			isa = PBXGroup;
 			children = (
+				8DA8DAAE1DE1966700A14B90 /* 常用的分类 */,
 				8D72CC601DDD50BB00643DDD /* 引导界面 */,
 				8D6F40DB1DC9897F00799FD3 /* 滑动悬浮视图 */,
 				8D6F40B21DC988B800799FD3 /* 按钮组件 */,
@@ -308,23 +349,28 @@
 			files = (
 				8D6F40E81DC989D400799FD3 /* MMMaterialDesignSpinner.m in Sources */,
 				8DA92DA51DC1D2780052AEBE /* ViewController.m in Sources */,
+				8DA8DABA1DE1A89400A14B90 /* DropDownContent.m in Sources */,
 				8D2A7E981DDE958F00C51EFE /* MMIntroductionViewController.m in Sources */,
 				8DA92DA21DC1D2780052AEBE /* AppDelegate.m in Sources */,
 				8DA92D9F1DC1D2780052AEBE /* main.m in Sources */,
 				8D6F40E61DC989D400799FD3 /* DeformationButton.m in Sources */,
+				8DA8DABD1DE1A90E00A14B90 /* ShowDropDown.m in Sources */,
 				8D2A7E9C1DDEA8AF00C51EFE /* ShowGradualChangeViewController.m in Sources */,
 				8D6F40F21DC9E43900799FD3 /* HHContentTableView.m in Sources */,
 				8DA92DC41DC2F0720052AEBE /* BaseTableViewController.m in Sources */,
 				8D6F40C51DC988B800799FD3 /* MM_Btn_Show.m in Sources */,
+				8DA8DAB11DE1967400A14B90 /* UIView+Extension.m in Sources */,
 				8D6F40EF1DC9DBCC00799FD3 /* ShowPagingController.m in Sources */,
 				8DA92DC71DC2FA260052AEBE /* MM_HomeViewController.m in Sources */,
 				8D6F40EC1DC98CD500799FD3 /* MM_HorizontalPagingView.m in Sources */,
 				8D2A7EA61DDEC98100C51EFE /* ShowMMRoundeButton.m in Sources */,
 				8D6F40D01DC9896F00799FD3 /* MMBubbleMenuButton.m in Sources */,
 				8D6F40CF1DC9896F00799FD3 /* DWBubbleMenuButton.m in Sources */,
+				8DA8DAB71DE19A4D00A14B90 /* MMDropDownMenu.m in Sources */,
 				8D6F40E91DC989D400799FD3 /* Show_We_Chat_Btn.m in Sources */,
 				8D2A7E9F1DDEAA8F00C51EFE /* MMShowTheIntroduct.m in Sources */,
 				8D2A7EA31DDEC6ED00C51EFE /* MMRoundedButton.m in Sources */,
+				8DA8DAB41DE197B400A14B90 /* UIBarButtonItem+Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

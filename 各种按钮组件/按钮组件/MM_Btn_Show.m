@@ -14,10 +14,12 @@
     [super viewDidLoad];
     self.titles = @[@"微信注册按钮",
                     @"仿猿题库按钮菜单",
-                    @"各种类型的按钮"];
+                    @"各种类型的按钮",
+                    @"下拉菜单"];
     self.classNames = @[@"Show_We_Chat_Btn",
                         @"MMBubbleMenuButton",
-                        @"ShowMMRoundeButton"];
+                        @"ShowMMRoundeButton",
+                        @"ShowDropDown"];
 }
 
 @end
