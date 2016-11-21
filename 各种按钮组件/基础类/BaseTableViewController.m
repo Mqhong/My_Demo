@@ -95,6 +95,9 @@
         UIViewController *vc = [[NSClassFromString(className) alloc] init];
         vc.title = self.titles[indexPath.row];
         [self.navigationController pushViewController:vc animated:YES];
+        
+        
+        
     }
 }
 @end
