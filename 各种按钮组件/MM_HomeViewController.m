@@ -19,9 +19,8 @@
     
     //框架模式有哪些？
     //MVC,MTV,MVP,CBD,ORM等
-    
     self.classNames = @[@"MM_Btn_Show",
-                        @"ShowPagingController",
+                        @"ShowAllPagingController",
                         @"ShowGradualChangeViewController",
                         @"TabbarAndNavigation"];
     [self setupNav];
